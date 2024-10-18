@@ -111,7 +111,7 @@ uint8_t RS232_Read(void)
 
 void USART1_IRQHandler(void)
 {
-	if(USART1->SR & USART_SR_IDLE)
+	if(USART1->SR & USART_SR_IDLE) // if IDLE detect
 	{
 		(void)USART1->DR; // clear data to read
 
